@@ -1,0 +1,127 @@
+
+html,body{
+	min-height: 100%;	
+}
+
+body{
+	font: 14px/22px "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	line-height: 20px;
+	background: #e5e5e5;
+}
+
+.row{
+	margin-bottom: $gapSize;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.m-l-md{
+	margin-left: $gapSize;
+}
+
+.header{
+	height: $headerHeight;
+	background: $colorPrimary;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top:0;
+	z-index: 10;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	.top-nav-right{
+		li{
+			a{
+				display: inline-block;				
+				line-height: $headerHeight;
+				padding: 0 25px;
+				font-size: 18px;
+				color: #fff;
+				&:hover{
+					background: rgba(0,0,0,.05);
+				}
+			}
+		}
+	}
+}
+
+.sidebar{
+	width: $barWidth;
+	position: fixed;
+	left: 0;
+	top:0;
+	bottom: 0;
+	z-index: 11;
+	height: 100%;
+	background: #fff;
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
+	.sidebar-header{
+		height: $headerHeight;
+		line-height: $headerHeight;
+		padding: 0 $gapSize;
+		background: $colorPrimary;				
+		.brand{
+			color: #fff;
+			font-size: 24px;
+			display: inline-block;			
+			font-weight: bold;			
+		}
+	}	
+}
+
+.nav{
+	li{
+		a{
+			display: block;
+			padding: 10px $gapSize;		
+			line-height: 24px;	
+			transition: all .3s;
+			&.active{
+				color: #2196F3;
+			}
+			&:hover{
+				background: #eee;
+			}
+			i{
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+.content-wrapper{
+	padding-left: $barWidth;
+	padding-top: $headerHeight;
+	padding-bottom: $footerHeight;
+	min-height: 100%;
+	position: relative;
+}
+
+.container{
+	padding: 30px;
+}
+
+.footer{
+	position: absolute;
+	left: $barWidth;
+	right: 0;
+	bottom: 0;
+	height: $footerHeight;
+	border-top: 1px solid $borderDefault;
+	padding: 0 $gapSize;
+	line-height: $footerHeight;
+	color: #636c72;
+}
+
+.box{
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+	.box-header{
+		padding: $gapSize;
+		border-bottom: 1px solid $borderDefault;
+	}
+	.box-body{
+		padding: $gapSize;
+	}
+}

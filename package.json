@@ -1,7 +1,7 @@
 {
-  "name": "html5-dev-scaffold",
+  "name": "dashboard-work",
   "version": "1.0.0",
-  "description": "移动端写样式时的脚手架工具",
+  "description": "dashboard-work",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/liukaijv/html5-dev-scaffold.git"
+    "url": "https://github.com/liukaijv/dashboard-work.git"
   }
 }

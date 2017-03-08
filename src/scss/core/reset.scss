@@ -1,83 +1,81 @@
-// reset
-
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
-	padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-size: 100%;
-	font-weight: normal;
-}
-
-ul {
-	list-style: none;
-}
-
-button,
-input,
-select,
-textarea {
-	margin: 0;
-}
-
 html {
-	text-size-adjust: 100%;
-	box-sizing: border-box;
-	&,
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
+	font-family:sans-serif;
+	font-size:100%;
+	line-height:1;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	box-sizing:border-box
 }
-
-img,
-embed,
-object,
-audio,
-video {
-	height: auto;
-	max-width: 100%;
+*,:before,:after {
+	box-sizing:inherit
 }
-
-iframe {
-	border: 0;
+body,header,footer,main,section,div,h1,h2,h3,h4,h5,h6,p,span,a,blockquote,q,pre,code,ol,ul,li,form,label,input,textarea,button,table,tr,th,td,dl,dt,dd,hr {
+	margin:0;
+	padding:0;
+	border:0;
+	font:inherit;
+	font-size:100%;
+	line-height:inherit;
+	vertical-align:baseline;
+	background:0 0
 }
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+	display:block
 }
-
-th,
-td {
-	padding: 0;
-	text-align: left;
+ol,ul {
+	list-style:none
+}
+hr {
+	border-bottom:1px solid #000
+}
+img {
+	max-width:100%;
+	height:auto;
+	vertical-align:middle;
+	border-style:none
+}
+a,a:hover {
+	color:#000;
+	text-decoration:none
+}
+blockquote,q {
+	quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none
+}
+[type=color],[type=date],[type=datetime-local],[type=email],[type=month],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=time],[type=url],[type=week],textarea {
+	display:block;
+	width:100%;
+	max-width:100%;
+	border:1px solid #000;
+	border-radius:0;
+	-webkit-appearance:none;
+	-moz-appearance:none
+}
+::-webkit-input-placeholder {
+	color:#ccc
+}
+:-moz-placeholder {
+	color:#ccc
+}
+::-moz-placeholder {
+	color:#ccc;
+	opacity:1
+}
+:-ms-input-placeholder {
+	color:#ccc
+}
+[type=reset],[type=submit],[type=button],button {
+	border:1px solid #000;
+	border-radius:0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	cursor:pointer
+}
+:focus {
+	outline:none
 }

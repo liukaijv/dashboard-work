@@ -1,0 +1,30 @@
+.login-bg{
+	background: #333;
+}
+.login-wrapper{
+	max-width:480px;
+	margin: 150px auto 20px;
+	background: #fff;
+	border-radius:2px;
+	.login-body{
+		padding: 30px 60px;
+		h2{
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+	}
+	.input-group{
+		position: relative;
+		i{
+			font-size: 18px;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -9px;
+			color:#666;
+		}
+		.input{
+			padding-left: 30px;
+		}
+	}
+}

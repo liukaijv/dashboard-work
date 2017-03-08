@@ -1,159 +1,46 @@
-// 基于flex
+// gird
 
-.flex-row,
-.flex-column {
-	display: flex;
-	flex-wrap: wrap;
+%w-100 {
+  width: 100%;
 }
 
-.flex-row {
-	flex-direction: row;
+.row {
+	margin-left: auto;
+  margin-right: auto;
+	overflow: auto;
 }
 
-.flex-column {
-	flex-direction: column;
+.col {
+	float: left;
 }
 
-.flex-around {
-	  justify-content: space-around;
+
+.c12 {
+  @extend %w-100;
 }
 
-.flex-between {
-	justify-content: space-between;
+$grid-list: (
+  c1    8.33%,
+  c2   16.66%,
+  c3   25%,
+  c4   33.33%,
+  c5   41.66%,
+  c6   50%,
+  c7   58.33%,
+  c8   66.66%,
+  c9   75%,
+  c10  83.33%,
+  c11  91.66%
+);
+
+@each $value in $grid-list {
+  .#{nth($value, 1)} {
+    width: nth($value, 2);
+  }
 }
 
-.flex-baseline {
-	align-items: baseline;
-}
-
-.flex-strech {
-	align-items: stretch;
-}
-
-.flex {
-	flex: 1;
-}
-
-.flex-none {
-	flex: none;
-}
-
-[class="col-"]{
-
-	flex-grow: 1;	
-
-	&.col-first {
-		order: -1;
-	}
-
-	&.col-last {
-		order: 99;
-	}
-
-	&.col-left {
-		margin-right: auto;
-	}
-
-	&.col-right {
-		margin-left: auto;
-	}
-
-	&.col-top {
-		margin-bottom: auto;
-	}
-
-	&.col-bottom {
-		margin-top: auto;
-	}
-
-	&.col-center {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	&.col-middle {
-		margin-top: auto;
-		margin-bottom: auto;
-	}
-}
-
-.flex-row {
-
-	&.flex-left {
-		justify-content: flex-start;
-	}
-
-	&.flex-right {
-		justify-content: flex-end;
-	}
-
-	&.flex-top {
-		align-items: flex-start;
-	}
-
-	&.flex-bottom {
-		align-items: flex-end;
-	}
-
-	&.flex-center {
-		justify-content: center;
-	}
-
-	&.flex-middle {
-		align-items: center;
-	}
-
-}
-
-.flex-column {
-
-	flex-grow: 1;	
-
-	&.column-first {
-		order: -1;
-	}
-
-	&.column-last {
-		order: 99;
-	}
-
-	&.column-left {
-		align-items: flex-start;
-	}
-
-	&.column-right {
-		align-items: flex-end;
-	}
-
-	&.column-top {
-		justify-content: flex-start;
-	}
-
-	&.column-bottom {
-		justify-content: flex-end;
-	}
-
-	&.column-center {
-		align-items: center;
-	}
-
-	&.column-middle {
-		justify-content: center;
-	}
-}
-
-@for $i from 1 through $flex-column {
-
-	.col-#{$i} {
-		width: percentage($i / $flex-column);
-	}
-
-	.col-offset-#{$i} {
-		width: percentage($i / $flex-column);
-	}
-
-	.flex-order-#{$i} {
-		order: $i;
-	}
-
+@media (max-width:870px) {
+  .row .col {
+    width: 100%;
+  }
 }
