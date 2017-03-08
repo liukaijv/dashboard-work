@@ -39,7 +39,7 @@ $grid-list: (
   }
 }
 
-@media (max-width:870px) {
+@media (max-width: $breakPoint) {
   .row .col {
     width: 100%;
   }

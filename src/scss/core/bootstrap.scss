@@ -124,3 +124,10 @@ body{
 		padding: $gapSize;
 	}
 }
+
+@media (max-width: $breakPoint) {
+	.pie-box{
+		margin-top: $gapSize;
+		margin-left: 0;
+	}
+}
